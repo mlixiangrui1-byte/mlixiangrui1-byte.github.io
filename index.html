@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A personal introduction from a third-year accounting student at The Hang Seng University of Hong Kong.">
+	<title>Personal Introduction | Accounting Student</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="site-header">
+		<a class="site-mark" href="#home" aria-label="Back to home">MY <span>PAGE</span></a>
+		<nav class="site-nav" aria-label="Main navigation">
+			<a href="#about">About Me</a>
+			<a href="#skills">Skills &amp; Challenges</a>
+			<a href="#hobbies">Hobbies</a>
+			<a href="#contact">Contact</a>
+		</nav>
+	</header>
+
+	<main class="page-shell">
+		<section class="welcome" id="home" aria-labelledby="welcome-title">
+			<div class="welcome-copy">
+				<p class="eyebrow"><span class="eyebrow-dot"></span> HONG KONG · COM1006</p>
+				<h1 id="welcome-title">Hello, welcome to<br><span>my portfolio</span></h1>
+				<p class="welcome-text">This personal site shares my study life, skills and hobbies. Scroll down to find out more about who I am. </p>
+				<a class="text-link" href="#about">Get to know me <span aria-hidden="true">↓</span></a>
+			</div>
+			<figure class="welcome-image">
+				<img src="images/cartoon-avatar.png" alt="A cartoon avatar of me">
+				<figcaption>A moment of study</figcaption>
+			</figure>
+			<div class="welcome-stamp" aria-hidden="true">STUDENT<br>NOTES <span>✳</span></div>
+		</section>
+
+			<section class="info-card about-card" id="about" aria-labelledby="about-title">
+				<div class="card-heading">
+					<span class="card-index">01 / INTRODUCTION</span>
+					<span class="card-symbol symbol-coral" aria-hidden="true">✳</span>
+				</div>
+				<h2 id="about-title">About Me</h2>
+                <p>I am a year-three Accounting student at The Hang Seng University of Hong Kong. I took COM1006 to enhance my understanding of technology to combine with my financial knowledge. This portfolio introduces me and documents my study. </p >				
+                    <div class="study-tag"><span>Major</span> Accounting <span class="tag-divider">·</span> <span>Year</span> 3</div>
+			</section>
+
+			<section class="info-card skills-card" id="skills" aria-labelledby="skills-title">
+				<div class="card-heading">
+					<span class="card-index">02 / THE PROCESS</span>
+					<span class="card-symbol symbol-green" aria-hidden="true">↗</span>
+				</div>
+				<h2 id="skills-title">Skills <span>&amp;</span> Challenges</h2>
+				<!-- Replace these prompts with your own real skills and challenges. -->
+				<div class="detail-row">
+<span class="detail-label"><strong>Developing</strong></span>					<p>I am developing my skills in data analysis and financial reporting.</p>
+				</div>
+				<div class="detail-row">
+<span class="detail-label"><strong>A challenge</strong></span>					<p>I am learning to manage my time efficiently while balancing academic and personal commitments.</p>
+				</div>
+			<p><span class="edit-note">Improve data analysis and time management.</span></p >
+            </section>
+
+			<section class="info-card hobbies-card" id="hobbies" aria-labelledby="hobbies-title">
+				<div class="card-heading">
+					<span class="card-index">03 / OFF THE CLOCK</span>
+					<span class="card-symbol symbol-blue" aria-hidden="true">♪</span>
+				</div>
+				<h2 id="hobbies-title">Hobbies</h2>
+				<!-- Add only hobbies that genuinely belong to you. -->
+<ol>
+<li>I love doing sports to help me relax🏃.</li>
+<li>I enjoy listening to music in my spare time🎵.</li>
+<li>I like watching movies on weekends🎬.</li>
+<li>I love dancing to different kinds of music💃.</li>
+</ol>				
+            <span class="edit-note">sports, music, movies, dancing</span>
+			</section>
+
+			<section class="info-card contact-card" id="contact" aria-labelledby="contact-title">
+				<div class="card-heading">
+					<span class="card-index">04 / SAY HELLO</span>
+					<span class="card-symbol symbol-yellow" aria-hidden="true">@</span>
+				</div>
+				<h2 id="contact-title">Contact</h2>
+<p class="contact-intro" style="color:#ffffff;">Feel free to contact me through <span style="color:#72bd6b;">my university email</span>.</p >
+<input type="text" id="userInput" placeholder="Type your question here">
+<button onclick="reply()">Send</button>
+<p id="replyText"></p >
+<br>
+<br>                
+    <p class="edit-note">s246819@hsu.edu.hk</p>
+			</section>
+		</div>
+	</main>
+<script>
+function reply(){
+  document.getElementById("replyText").innerText = "Thank you, I will read your question soon.";
+}
+</script>
+
+	<footer class="site-footer">
+		<span>Personal introduction · The Hang Seng University of Hong Kong</span>
+		<a href="#home">Back to top ↑</a>
+	</footer>
+</body>
+</html>

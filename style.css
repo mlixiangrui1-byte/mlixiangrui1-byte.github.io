@@ -1,0 +1,532 @@
+/* Edit these variables to change the page-wide color palette. */
+:root {
+	--ink: #20312d;
+	--muted: #687570;
+	--paper: #f7f8f3;
+	--card: #ffffff;
+	--line: #e3e9e2;
+	--coral: #e87963;
+	--green: #54856d;
+	--blue: #5f7fa5;
+	--yellow: #d5a93d;
+	--serif: "Playfair Display", Georgia, serif;
+	--sans: "DM Sans", "Noto Sans TC", sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	background: var(--paper);
+	color: var(--ink);
+	font-family: var(--sans);
+	-webkit-font-smoothing: antialiased;
+}
+
+a {
+	color: inherit;
+}
+
+.site-header,
+.page-shell,
+.site-footer {
+	width: min(1120px, calc(100% - 64px));
+	margin-inline: auto;
+}
+
+.site-header {
+	min-height: 82px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 28px;
+	border-bottom: 1px solid var(--line);
+}
+
+.site-mark {
+	color: var(--ink);
+	font-size: 13px;
+	font-weight: 700;
+	letter-spacing: 1.2px;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.site-mark span {
+	color: var(--coral);
+}
+
+.site-nav {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: clamp(16px, 3vw, 38px);
+}
+
+.site-nav a {
+	color: var(--muted);
+	font-size: 12px;
+	text-decoration: none;
+	transition: color 160ms ease;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+	color: var(--coral);
+}
+
+.page-shell {
+	padding-block: 52px 72px;
+}
+
+.welcome {
+	position: relative;
+	min-height: 375px;
+	display: grid;
+	grid-template-columns: 1.08fr 0.92fr;
+	align-items: center;
+	gap: 52px;
+	padding: 8px 36px 45px 20px;
+}
+
+.welcome-copy {
+	position: relative;
+	z-index: 1;
+	max-width: 520px;
+}
+
+.eyebrow,
+.card-index {
+	margin: 0;
+	color: var(--muted);
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 1.3px;
+}
+
+.eyebrow {
+	display: flex;
+	align-items: center;
+	gap: 9px;
+}
+
+.eyebrow-dot {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: var(--coral);
+}
+
+.welcome h1 {
+	margin: 20px 0 14px;
+	font-family: var(--serif);
+	font-size: clamp(34px, 4.6vw, 54px);
+	font-weight: 600;
+	line-height: 1.35;
+}
+
+.welcome h1 span {
+	color: var(--green);
+}
+
+.welcome-text {
+	max-width: 390px;
+	margin: 0;
+	color: var(--muted);
+	font-size: 14px;
+	line-height: 1.9;
+}
+
+.text-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 14px;
+	margin-top: 24px;
+	color: var(--ink);
+	font-size: 12px;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.text-link span {
+	color: var(--coral);
+	font-size: 17px;
+}
+
+.welcome-image {
+	position: relative;
+	margin: 0;
+	height: 285px;
+	background: #dce5dc;
+}
+
+.welcome-image::before {
+	position: absolute;
+	top: 13px;
+	left: -13px;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #b7cbbb;
+	content: "";
+}
+
+.welcome-image img {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.welcome-image figcaption {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	padding: 9px 13px;
+	background: var(--card);
+	color: var(--muted);
+	font-size: 10px;
+}
+
+.welcome-stamp {
+	position: absolute;
+	right: 0;
+	bottom: 14px;
+	color: var(--green);
+	font-size: 9px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	line-height: 1.5;
+	text-align: right;
+}
+
+.welcome-stamp span {
+	color: var(--coral);
+	font-size: 17px;
+}
+
+
+
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 16px;
+
+/* Adjust this shared rule to change the look of every information card. */
+.info-card {
+	min-height: 238px;
+	padding: 25px 27px 26px;
+	border: 1px solid var(--line);
+	background: var(--card);
+    margin-top: 24px;
+}
+
+.card-heading {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+}
+
+.card-symbol {
+	width: 32px;
+	height: 32px;
+	display: grid;
+	place-items: center;
+	border-radius: 50%;
+	font-size: 16px;
+}
+
+.symbol-coral {
+	background: #f9e9e4;
+	color: var(--coral);
+}
+
+.symbol-green {
+	background: #eaf1eb;
+	color: var(--green);
+}
+
+.symbol-blue {
+	background: #eaf0f6;
+	color: var(--blue);
+}
+
+.symbol-yellow {
+	background: #f7f1df;
+	color: var(--yellow);
+}
+
+.info-card h2 {
+	margin: 18px 0 11px;
+	font-family: var(--serif);
+	font-size: 23px;
+	font-weight: 600;
+	line-height: 1.4;
+}
+
+.info-card h2 span {
+	color: var(--coral);
+}
+
+.info-card > p,
+.detail-row p {
+	margin: 0;
+	color: var(--muted);
+	font-size: 13px;
+	line-height: 1.85;
+}
+
+.study-tag {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	margin-top: 18px;
+	padding: 8px 11px;
+	background: #f1f5ef;
+	color: var(--ink);
+	font-size: 11px;
+}
+
+.study-tag span:first-child,
+.study-tag span:nth-of-type(2) {
+	color: var(--green);
+}
+
+.tag-divider {
+	color: #9da9a1;
+}
+
+.detail-row {
+	display: grid;
+	grid-template-columns: 82px 1fr;
+	gap: 12px;
+	padding: 11px 0;
+	border-top: 1px solid var(--line);
+}
+
+.detail-row:first-of-type {
+	margin-top: 15px;
+}
+
+.detail-label {
+	color: var(--green);
+	font-size: 11px;
+	font-weight: 600;
+	line-height: 1.8;
+}
+
+.detail-row p {
+	font-size: 12px;
+}
+
+.edit-note {
+	display: inline-block;
+	margin-top: 17px;
+	padding-bottom: 3px;
+	border-bottom: 1px solid var(--coral);
+	color: var(--coral);
+	font-size: 11px;
+}
+
+.contact-intro {
+	margin-bottom: 17px !important;
+}
+
+.email-placeholder {
+	display: inline-block;
+	padding: 9px 12px;
+	border: 1px dashed #b8c7bd;
+	color: var(--green) !important;
+	font-size: 12px !important;
+}
+
+.site-footer {
+	min-height: 66px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	border-top: 1px solid var(--line);
+	color: var(--muted);
+	font-size: 10px;
+}
+
+.site-footer a {
+	text-decoration: none;
+}
+
+@media (max-width: 700px) {
+	.site-header,
+	.page-shell,
+	.site-footer {
+		width: min(100% - 36px, 520px);
+	}
+
+	.site-header {
+		min-height: 72px;
+		align-items: flex-start;
+		flex-direction: column;
+		justify-content: center;
+		gap: 10px;
+		padding-block: 13px;
+	}
+
+	.site-nav {
+		width: 100%;
+		justify-content: space-between;
+		gap: 10px;
+	}
+
+	.site-nav a {
+		font-size: 10px;
+	}
+
+	.page-shell {
+		padding-block: 34px 48px;
+	}
+
+	.welcome {
+		grid-template-columns: 1fr;
+		gap: 28px;
+		padding: 4px 0 45px;
+	}
+
+	.welcome h1 {
+		font-size: clamp(32px, 9vw, 43px);
+	}
+
+	.welcome-image {
+		height: min(58vw, 280px);
+		margin-left: 12px;
+	}
+
+	.welcome-stamp {
+		right: 2px;
+		bottom: 8px;
+	}
+
+	.section-grid {
+		grid-template-columns: 1fr;
+		gap: 12px;
+	}
+
+	.info-card {
+		min-height: auto;
+		padding: 22px;
+	}
+}
+
+@media (max-width: 360px) {
+	.site-header,
+	.page-shell,
+	.site-footer {
+		width: calc(100% - 28px);
+	}
+
+	.site-nav {
+		gap: 7px;
+	}
+
+	.site-nav a {
+		font-size: 9px;
+	}
+
+	.detail-row {
+		grid-template-columns: 72px 1fr;
+		gap: 8px;
+	}
+}
+
+.welcome-card {
+  background-color: #9F9679; /* Pomelo Olive 橄榄底色 */
+  border-radius: 18px;
+  padding: 20px;
+  margin-top: 24px;
+}
+
+.about-card {
+  background-color: #933B5B; /* Amaranth 紫红底色 */
+  border-radius: 18px;
+  padding: 20px;
+  margin-top: 24px;
+}
+
+.skills-card {
+  background-color: #B5728A; /* Thulian Pink 粉紫底色 */
+  border-radius: 18px;
+  padding: 20px;
+  margin-top: 24px;
+}
+
+.hobbies-card {
+  background-color: #AABAAE; /* Brook Green 灰绿底色 */
+  border-radius: 18px;
+  padding: 20px;
+  margin-top: 24px;
+}
+
+.contact-card {
+  background-color: #E3D6BF; /* Chalk 米浅底色 */
+  border-radius: 18px;
+  padding: 20px;
+  margin-top: 24px;
+}
+
+/* 深色卡片文字改成白色，保证看得清 */
+.welcome-card h2,.welcome-card p,
+.about-card h2,.about-card p,
+.skills-card h2,.skills-card p,
+.hobbies-card h2,.hobbies p{
+  color:white;
+}
+/* contact是浅色底，文字用深灰 */
+.contact-card h2,.contact-card p{
+  color:#333333;
+}
+
+.edit-note{
+  display: inline-block;
+  background-color: #ffffff;
+  color:#444444;
+  padding:4px 10px;
+  border-radius:8px;
+  font-size:13px;
+  margin-top:12px;
+}
+
+.study-tag {
+  border-radius: 999px !important;
+}
+
+#contact-title {
+  color:#ffffff !important;
+}
+
+
+.hobbies-card .detail-list li {
+  color: #ffffff;
+}
+
+
+.hobbies-card ol li::marker {
+  color: #15803d !important;
+  font-weight: bold;
+}
+
+.hobbies-card ol li {
+  color: #ffffff !important;
+}
+.hobbies-card ol li::marker {
+  color: #15803d !important;
+  font-weight: bold;
+}
+
+#hobbies ol li::marker {
+  color: black;
+}
